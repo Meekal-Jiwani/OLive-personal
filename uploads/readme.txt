@@ -1,0 +1,1 @@
+This folder acts as a file management system. So everytime a user uploads a file, it is stored in this folder just in case for lost files. 

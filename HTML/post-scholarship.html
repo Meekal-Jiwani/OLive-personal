@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Scholarship</title>
+    <link rel="stylesheet" href="../CSS/post-scholarship.css">
+    <script src="../JS/post-scholarship.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div id="profile-top">
+            <div id="sidebar-profile-image-container">
+                <img src="../images/sfu-logo.png" alt="Profile Image" id="sidebar-profile-image">
+            </div>
+            <h2 id="University">Simon Fraser University</h2>
+        </div>
+        <ul>
+            <li><a href="Uniprofile.html"><img src="../images/user.png" alt="Profile Icon" class="icon"> Profile</a></li>
+            <li><a href="scholarships.html"><img src="../images/resume.png" alt="Applications Icon" class="icon"> Scholarships</a></li>
+            <li class="active"><a href="post-scholarship.html"><img src="../images/document.png" alt="Post Scholarship Icon" class="icon"> Post a new Scholarship</a></li>
+            <li><a href="settings2.html"><img src="../images/setting.png" alt="Settings Icon" class="icon"> Settings</a></li>
+            <li><a href="contactus2.html"><img src="../images/chat.png" alt="Contact Us Icon" class="icon"> Contact Us</a></li>
+        </ul>
+        <a href="../HTML/front.html" id="sign-out" class="button-link">Sign Out</a>
+    </div>
+
+    <!-- Main Content -->
+    <div id="new-info">
+        <h2>Post a New Scholarship</h2>
+
+        <!-- Scholarship Details Container -->
+        <div id="scholarship-details-container">
+
+            <!-- Static Header Section -->
+            <div id="scholarship-header">
+                <div id="institution-logo-container">
+                    <a href="#">
+                        <img src="../images/sfu-logo.png" alt="Institution Logo" id="institution-logo">
+                    </a>
+                </div>
+                <div id="institution-name-container">
+                    <a href="#" id="institution-name">Simon Fraser University</a>
+                </div>
+            </div>
+
+            <!-- Scholarship Details List -->
+            <ul id="scholarship-details-list">
+                <li>
+                    <strong>Scholarship Name:</strong>
+                    <span id="scholarship-name">McTaggart Cowan Scholarship</span>
+                    <span class="edit-icon" onclick="editField('scholarship-name')"><i class="fas fa-edit"></i></span>
+                </li>
+                <li>
+                    <strong>Category:</strong>
+                    <span id="category">Zoology</span>
+                    <span class="edit-icon" onclick="editField('category')"><i class="fas fa-edit"></i></span>
+                </li>
+                <li>
+                    <strong>Amount:</strong>
+                    <span id="amount">CAD $10,000</span>
+                    <span class="edit-icon" onclick="editField('amount')"><i class="fas fa-edit"></i></span>
+                </li>
+                <li>
+                    <strong>Deadline:</strong>
+                    <span id="deadline">12-32-2070</span>
+                    <span class="edit-icon" onclick="editField('deadline')"><i class="fas fa-edit"></i></span>
+                </li>
+                <li>
+                    <strong>Description:</strong>
+                    <span id="description">This scholarship supports outstanding students in Zoology programs.</span>
+                    <span class="edit-icon" onclick="editField('description')"><i class="fas fa-edit"></i></span>
+                </li>
+            </ul>
+
+            <!-- Form Link Input and Post Button -->
+            <div id="form-link-container">
+                <!-- Input Field for the Application Form Link -->
+                <input type="url" id="form-link" class="edit-input" placeholder="Enter the link to the application form">
+                
+                <!-- Post Scholarship Button -->
+                <div id="button-wrapper">
+                    <button id="post-button">Post Scholarship</button>
+                </div>
+            </div>            
+
+        </div>
+    </div>
+</body>
+</html>

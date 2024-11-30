@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="../CSS/student-details.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div id="profile-top">
+            <div id="sidebar-profile-image-container">
+                <img src="../images/sfu-logo.png" alt="Profile Image" id="sidebar-profile-image">
+            </div>
+            <h2 id="University">Simon Fraser University</h2>
+        </div>
+        <ul>
+            <li><a href="Uniprofile.html"><img src="../images/user.png" alt="Profile Icon" class="icon"> Profile</a></li>
+            <li class="active"><a href="scholarships.html"><img src="../images/resume.png" alt="Scholarships Icon" class="icon"> Scholarships</a></li>
+            <li ><a href="post-scholarship.html"><img src="../images/document.png" alt="post-scholarship Icon" class="icon"> Post a new scholarship</a></li>
+            <li><a href="settings2.html"><img src="../images/setting.png" alt="Settings Icon" class="icon"> Settings</a></li>
+            <li><a href="contactus2.html"><img src="../images/chat.png" alt="Contact Us Icon" class="icon"> Contact Us</a></li>
+        </ul>
+        <a href="../HTML/front.html" id="sign-out" class="button-link">Sign Out</a>
+    </div>
+
+    <!-- Student Details Section -->
+    <div id="student-details">
+        <h2 id="student-name">Student 1</h2>
+
+        <!-- Application Information -->
+        <h3>Application</h3>
+        <div class="info-box">
+            Link to the student application.
+        </div>
+
+        <!-- Relevant Links -->
+        <h3>Relevant Links</h3>
+        <div class="info-box">
+            The links that the student added to his account.
+        </div>
+
+        <!-- Relevant Documents -->
+        <h3>Relevant Documents</h3>
+        <div class="info-box">
+            The documents that the student added to his account.
+        </div>
+
+        <!-- Decision Section -->
+        <div id="decision-section">
+            <button id="accepted-button" class="decision-button">Accepted</button>
+            <button id="denied-button" class="decision-button">Denied</button>
+            <button id="submit-decision" class="submit-button">Submit decision</button>
+        </div>
+    </div>
+
+    <script src="../JS/student-details.js"></script>
+</body>
+</html>

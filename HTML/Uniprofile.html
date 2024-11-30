@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institution Profile</title>
+    <link rel="stylesheet" href="../CSS/Uniprofilestyles.css">
+</head>
+<body>
+
+    <div id="sidebar">
+        <div id="profile-top">
+            <div id="sidebar-profile-image-container">
+                <img src="../images/sfu-logo.png" alt="Profile Image" id="sidebar-profile-image">
+            </div>
+            <h2 id="University">Simon Fraser University</h2>
+        </div>
+        <ul>
+            <li class="active"><a href="Uniprofile.html"><img src="../images/user.png" alt="Profile Icon" class="icon"> Profile</a></li>
+            <li><a href="scholarships.html"><img src="../images/resume.png" alt="Applications Icon" class="icon"> Scholarships</a></li>
+            <li ><a href="post-scholarship.html"><img src="../images/document.png" alt="post-scholarship Icon" class="icon"> Post a new scholarship</a></li>
+            <li><a href="settings2.html"><img src="../images/setting.png" alt="Settings Icon" class="icon"> Settings</a></li>
+            <li><a href="contactus2.html"><img src="../images/chat.png" alt="Contact Us Icon" class="icon"> Contact Us</a></li>
+        </ul>
+        <a href="../HTML/front.html" id="sign-out" class="button-link">Sign Out</a>
+    </div>
+
+    <div id="profile-info">
+        <h2>Profile</h2>
+
+        <!-- Basic Information Section -->
+        <div id="profile-top-section">      
+            <!-- First Box: Basic Information -->
+            <div id="basic-info-section">
+                <h3>Basic Information</h3>
+                <p><strong>Institution Name:</strong> <span id="institutionName">Simon Fraser University</span> 
+                    <span class="edit-icon" onclick="editField('institutionName')"><i class="fas fa-edit"></i></span>
+                </p>
+                <p><strong>Nature:</strong> <span id="nature">University</span> 
+                    <span class="edit-icon" onclick="editField('nature')"><i class="fas fa-edit"></i></span>
+                </p>
+                <p><strong>Address:</strong> <span id="address">123 Main St</span> 
+                   <span class="edit-icon" onclick="editField('address')"><i class="fas fa-edit"></i></span>
+                </p>
+                <p><strong>Phone number:</strong> <span id="phone">+1 234 567 8901</span> 
+                   <span class="edit-icon" onclick="editField('phone')"><i class="fas fa-edit"></i></span>
+                </p>
+                <p><strong>Email:</strong> <span id="email">example@example.com</span> 
+                   <span class="edit-icon" onclick="editField('email', 'email')"><i class="fas fa-edit"></i></span>
+                </p>
+                <p><strong>Website:</strong> <span id="website">https://example.com</span> 
+                   <span class="edit-icon" onclick="editField('website', 'url')"><i class="fas fa-edit"></i></span>
+                </p>
+            </div>
+        
+            <!-- Second Box: Additional Information -->
+            <div id="basic-info-section">
+                <h3>Additional Information</h3>
+                <p><strong>Campus:</strong> <span id="campus">Vancouver, BC, Canada</span> 
+                    <span class="edit-icon" onclick="editField('campus')"><i class="fas fa-edit"></i></span>
+                </p>
+                <p><strong>Date of Establishment:</strong> <span id="establishmentDate">1965</span> 
+                    <span class="edit-icon" onclick="editField('establishmentDate')"><i class="fas fa-edit"></i></span>
+                </p>
+                <p><strong>Founder:</strong> <span id="founder">John Doe</span> 
+                    <span class="edit-icon" onclick="editField('founder')"><i class="fas fa-edit"></i></span>
+                </p>
+                <p><strong>Current President/CEO:</strong> <span id="ceo">Jane Smith</span> 
+                    <span class="edit-icon" onclick="editField('ceo')"><i class="fas fa-edit"></i></span>
+                </p>
+                <p><strong>Affiliations:</strong> <span id="affiliations">Association of Universities</span> 
+                    <span class="edit-icon" onclick="editField('affiliations')"><i class="fas fa-edit"></i></span>
+                </p>
+            </div>
+        </div>
+        
+
+        <h2>Profile Images</h2>
+        <div id="Images-box">
+            <div id="main-profile-image-container">
+                <img src="../images/sfu-logo.png" alt="Profile Image" id="main-profile-image">
+                <div class="edit-overlay" onclick="uploadImage('main-profile-image')">Edit</div>
+            </div>  
+            <div class="banner-info">
+                <img src="../images/sfu-banner.jpg" alt="Banner Image" id="banner-profile-image">
+                <div class="edit-overlay" onclick="uploadImage('banner-profile-image')">Edit</div>
+            </div>
+        </div>
+
+        <!-- Personal Description Section -->
+        <div id="description-section">
+            <h3>Personal Description</h3>
+            <p> 
+                <span id="description">Description for the About section</span>
+                <span class="edit-icon" onclick="editField('description')"><i class="fas fa-edit"></i></span>
+            </p>
+        </div>
+    </div>
+
+<script src="../JS/Uniprofilescripts.js"></script>
+</body>
+</html>

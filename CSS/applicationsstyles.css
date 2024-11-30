@@ -1,0 +1,239 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/fonts/SF-Pro-Display-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+/* Global styling */
+body {
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    color: #333;
+}
+
+/* Sidebar styling */
+#sidebar {
+    width: 20vw; /* Adjusted to viewport width */
+    background-color: #FFFFFF;
+    padding: 2vh 1vw;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 0.2vw 0 0.5vw rgba(0, 0, 0, 0.1);
+}
+
+#profile-top {
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    margin-bottom: 3vh;
+}
+
+#sidebar-profile-image-container {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 1.5vw;
+}
+
+#sidebar-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#student-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.button-link {
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: 3vh auto;
+    padding: 1vh;
+    border: 0.1vw solid #494C3A;
+    border-radius: 0.5vw;
+    color: #494C3A;
+    background: transparent;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-link:hover {
+    background-color: #A9BA9D;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 3vh;
+}
+
+#sidebar ul li {
+    padding: 0; /* Remove padding from li */
+    margin: 0.5vh 0;
+    font-size: 1rem;
+    border-radius: 0.5vw;
+    overflow: hidden;
+}
+
+#sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 2vh;
+    width: 100%; /* Make anchor fill the li element */
+    text-decoration: none;
+    color: inherit;
+    gap: 0.5vw;
+    transition: background-color 0.2s ease;
+}
+
+#sidebar ul li a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Active link styling */
+#sidebar ul li.active a {
+    background-color: #494C3A;
+    color: white;
+}
+
+.icon {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-right: 1vw;
+    vertical-align: middle;
+}
+
+#applications-section {
+    margin-left: 22vw;
+    padding: 5vh 3vw;
+    width: calc(100% - 22vw);
+}
+
+#applications-section h2 {
+    font-size: 2rem;
+    color: #494C3A;
+    margin-bottom: 2vh;
+}
+
+.application-card {
+    background-color: #D3D3D3;
+    padding: 2vh 2vw;
+    margin-bottom: 2vh;
+    border-radius: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-details {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.app-details img {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.status {
+    font-weight: bold;
+    color: #333; /* Always black for the word "Status:" */
+}
+
+.status .status-highlight {
+    font-weight: bold;
+    color: inherit;
+    margin-left: 0.5em; /* Adjust the spacing as needed */
+}
+
+.status.in-progress .status-highlight {
+    color: #FFA500; /* Orange for "In progress" */
+}
+
+.status.denied .status-highlight {
+    color: #FF0000; /* Red for "Denied" */
+}
+
+.status.approved .status-highlight {
+    color: #008000; /* Green for "Approved" */
+}
+
+
+/* Dark theme styling for the Applications Page */
+.dark-theme {
+    background-color: #1A1A1A; /* Dark background for the entire page */
+    color: #EAEAEA; /* Light text color for the body */
+}
+
+.dark-theme #sidebar {
+    background-color: #333333; /* Darker sidebar background */
+}
+
+.dark-theme #sidebar ul li a {
+    color: #EAEAEA; /* Light text for sidebar links */
+}
+
+.dark-theme #sidebar ul li a:hover {
+    background-color: #494C3A; /* Olive hover effect */
+}
+
+.dark-theme #sidebar ul li.active a {
+    background-color: #A9BA9D; /* Highlighted active item */
+    color: #1A1A1A; /* Darker text for contrast */
+}
+
+.dark-theme #applications-section h2{
+    color: #FFFFFF;
+}
+
+.dark-theme #applications-section {
+    background-color: #1A1A1A; /* Darker background for main content */
+    color: #EAEAEA; /* Light text */
+}
+
+.dark-theme .application-card {
+    background-color: #333333; /* Dark card background */
+    color: #EAEAEA; /* Light text */
+    border: 1px solid #444444; /* Optional border for contrast */
+}
+
+.dark-theme .app-details img {
+    border: 2px solid #555555; /* Optional border for profile images */
+}
+
+.dark-theme .status {
+    color: #FFFFFF; /* Neutral text for status */
+}
+
+.dark-theme .status.in-progress .status-highlight {
+    color: #FFB84D; /* Softer orange for "In progress" */
+}
+
+.dark-theme .status.denied .status-highlight {
+    color: #FF6666; /* Softer red for "Denied" */
+}
+
+.dark-theme .status.approved .status-highlight {
+    color: #66FF66; /* Bright green for "Approved" */
+}
+
+.dark-theme .button-link {
+    border-color: #FF6666; /* Light red border */
+    color: #FF6666; /* Text matches the border */
+}
+
+.dark-theme .button-link:hover {
+    background-color: #FF6666; /* Red background */
+    color: #1A1A1A; /* Contrast for readability */
+}
+

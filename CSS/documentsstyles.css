@@ -1,0 +1,379 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/fonts/SF-Pro-Display-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+/* Global styling */
+body {
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    color: #333;
+}
+
+/* Sidebar styling */
+#sidebar {
+    width: 20vw; /* Adjusted to viewport width */
+    background-color: #FFFFFF;
+    padding: 2vh 1vw;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 0.2vw 0 0.5vw rgba(0, 0, 0, 0.1);
+}
+
+#profile-top {
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    margin-bottom: 3vh;
+}
+
+#sidebar-profile-image-container {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 1.5vw;
+}
+
+#sidebar-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#student-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.button-link {
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: 3vh auto;
+    padding: 1vh;
+    border: 0.1vw solid #494C3A;
+    border-radius: 0.5vw;
+    color: #494C3A;
+    background: transparent;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-link:hover {
+    background-color: #A9BA9D;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 3vh;
+}
+
+#sidebar ul li {
+    padding: 0; /* Remove padding from li */
+    margin: 0.5vh 0;
+    font-size: 1rem;
+    border-radius: 0.5vw;
+    overflow: hidden;
+}
+
+#sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 2vh;
+    width: 100%; /* Make anchor fill the li element */
+    text-decoration: none;
+    color: inherit;
+    gap: 0.5vw;
+    transition: background-color 0.2s ease;
+}
+
+#sidebar ul li a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Active link styling */
+#sidebar ul li.active a {
+    background-color: #494C3A;
+    color: white;
+}
+
+.icon {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-right: 1vw;
+    vertical-align: middle;
+}
+
+#documents-section {
+    margin-left: 22vw;
+    padding: 5vh 3vw;
+    width: calc(100% - 22vw);
+}
+
+#documents-section h2 {
+    font-size: 2rem;
+    color: #494C3A;
+    margin-bottom: 2vh;
+}
+
+.documents-card {
+    background-color: #D3D3D3;
+    padding: 2vh 2vw;
+    margin-bottom: 2vh;
+    border-radius: 1vw;
+    position: relative;
+    font-size: 1rem;
+    color: #333;
+}
+
+.documents-card h3 {
+    margin: 0;
+    font-weight: 600;
+    color: #494C3A;
+}
+
+.documents-card p {
+    margin: 0.5vh 0;
+    font-weight: 400;
+    line-height: 1.5;
+
+}
+
+#links-container, #documents-container {
+    margin-top: 1vh;
+}
+
+.add-icon {
+    position: absolute;
+    right: 1vw;
+    top: 8.5vh;
+    font-size: 2rem;
+    color: #494C3A;
+    cursor: pointer;
+}
+
+.add-icon:hover {
+    color: #A9BA9D;
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="url"],
+.modal-content input[type="file"] {
+    width: 80%; /* Adjust width to 80% for a shorter look */
+    padding: 10px;
+    margin: 10px auto; /* Center the inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block; /* Ensures centering applies */
+}
+
+.modal-content button {
+    width: 50%; /* Center the button as well */
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #494C3A;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+}
+
+.modal-content button:hover {
+    background-color: #A9BA9D;
+}
+
+.entry {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #D3D3D3;
+    border-radius: 4px;
+}
+
+.delete-button {
+    background-color: #494C3A;
+    color: white;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* Space between button and link text */
+    padding: 0;
+}
+
+.delete-button:hover {
+    background-color: #A9BA9D;
+}
+
+.entry p {
+    margin: 0; /* Remove default margin for alignment */
+}
+
+.entry a {
+    color: #004895;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+/* Dark theme styling for the Documents Page */
+.dark-theme {
+    background-color: #1A1A1A; /* Dark background for the entire page */
+    color: #EAEAEA; /* Light text color for the body */
+}
+
+.dark-theme #sidebar {
+    background-color: #333333; /* Dark sidebar background */
+}
+
+.dark-theme #sidebar ul li a {
+    color: #EAEAEA; /* Light text for sidebar links */
+}
+
+.dark-theme #sidebar ul li a:hover {
+    background-color: #494C3A; /* Olive hover effect */
+}
+
+.dark-theme #sidebar ul li.active a {
+    background-color: #A9BA9D; /* Highlighted active item */
+    color: #1A1A1A; /* Darker text for contrast */
+}
+
+.dark-theme #documents-section h2{
+    color: #FFFFFF;
+}
+
+.dark-theme #documents-section {
+    background-color: #1A1A1A; /* Darker background for main content */
+    color: #EAEAEA; /* Light text */
+}
+
+.dark-theme .documents-card {
+    background-color: #333333; /* Dark card background */
+    color: #EAEAEA; /* Light text */
+}
+
+.dark-theme .documents-card h3 {
+    color: #EAEAEA; /* Light heading text */
+}
+
+.dark-theme .documents-card p {
+    color: #CCCCCC; /* Softer light gray for paragraph text */
+}
+
+.dark-theme #links-container, 
+.dark-theme #documents-container {
+    background-color: #333333; /* Container background */
+
+}
+
+.dark-theme .add-icon {
+    color: #EAEAEA; /* Light add icon color */
+}
+
+.dark-theme .add-icon:hover {
+    color: #A9BA9D; /* Lighter olive hover */
+}
+
+.dark-theme .modal-content {
+    background-color: #333333; /* Dark modal background */
+    color: #EAEAEA; /* Light modal text */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+.dark-theme .modal-content input[type="text"],
+.dark-theme .modal-content input[type="url"],
+.dark-theme .modal-content input[type="file"] {
+    background-color: #444444; /* Dark input background */
+    color: #EAEAEA; /* Light text in inputs */
+    border: 1px solid #555555; /* Darker border */
+}
+
+.dark-theme .modal-content button {
+    background-color: #494C3A; /* Olive button background */
+    color: #EAEAEA; /* Light text */
+}
+
+.dark-theme .modal-content button:hover {
+    background-color: #A9BA9D; /* Light olive hover */
+    color: #1A1A1A; /* Dark text for contrast */
+}
+
+.dark-theme .entry {
+    background-color: #333333; /* Dark entry background */
+    color: #EAEAEA; /* Light entry text */
+}
+
+.dark-theme .delete-button {
+    background-color: #690000; /* Bright red delete button */
+    color: #1A1A1A; /* Dark text for contrast */
+}
+
+.dark-theme .delete-button:hover {
+    background-color: #820000; /* Darker red hover */
+}
+
+.dark-theme .entry a {
+    color: #66B2FF; /* Bright link color for contrast */
+}
+
+.dark-theme .entry a:hover {
+    color: #3399FF; /* Slightly darker hover color */
+}
+.dark-theme .button-link {
+    border-color: #FF6666; /* Light red border */
+    color: #FF6666; /* Text matches the border */
+}
+
+.dark-theme .button-link:hover {
+    background-color: #FF6666; /* Red background */
+    color: #1A1A1A; /* Contrast for readability */
+}
+
+
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="../CSS/profilestyles.css"> 
+</head>
+<body>
+
+<div id="sidebar">
+    <div id="profile-top">
+        <div id="sidebar-profile-image-container">
+            <img src="../images/profile.png" alt="Profile Image" id="sidebar-profile-image">
+        </div>
+        <h2 id="student-name">John Doe</h2>
+    </div>
+    <ul>
+        <li class="active"><a href="profile.html"><img src="../images/user.png" alt="Profile Icon" class="icon"> Profile</a></li>
+        <li><a href="feed.html"><img src="../images/apply.webp" alt="Apply now Icon" class="icon"> Apply Now!</a></li>
+        <li><a href="applications.html"><img src="../images/resume.png" alt="Applications Icon" class="icon"> Applications</a></li>
+        <li><a href="documents.html"><img src="../images/document.png" alt="Documents Icon" class="icon"> Documents</a></li>
+        <li><a href="settings.html"><img src="../images/setting.png" alt="Settings Icon" class="icon"> Settings</a></li>
+        <li><a href="contactus.html"><img src="../images/chat.png" alt="Contact Us Icon" class="icon"> Contact Us</a></li>
+    </ul>
+    <a href="../HTML/front.html" id="sign-out" class="button-link">Sign Out</a>
+</div>
+    
+
+<div id="profile-info">
+    <h2>Profile</h2>
+    <!-- Basic Information Section -->
+    <div id="profile-top-section">
+        <div id="main-profile-image-container">
+            <img src="../images/profile.png" alt="Profile Image" id="main-profile-image">
+            <div class="edit-overlay">Edit</div>
+        </div>        
+        <div id="basic-info-section">
+            <h3>Basic Information</h3>
+            <p><strong>First Name:</strong> <span id="firstName">John</span> 
+               <span class="edit-icon" onclick="editField('firstName')"><i class="fas fa-edit"></i></span>
+            </p>
+            <p><strong>Last Name:</strong> <span id="lastName">Doe</span> 
+               <span class="edit-icon" onclick="editField('lastName')"><i class="fas fa-edit"></i></span>
+            </p>
+            <p><strong>Age:</strong> <span id="age">19 years old</span> 
+               <span class="edit-icon" onclick="editField('age')"><i class="fas fa-edit"></i></span>
+            </p>
+            <p><strong>Location:</strong> <span id="location">Vancouver, BC, Canada</span> 
+               <span class="edit-icon" onclick="editField('location')"><i class="fas fa-edit"></i></span>
+            </p>
+        </div>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div id="contact-info-section">
+        <h3>Contact Information</h3>
+        <p><span id="contactInfo">Add something to the public</span>
+           <span class="edit-icon" onclick="editField('contactInfo')"><i class="fas fa-edit"></i></span>
+        </p>
+    </div>
+
+    <!-- Personal Description Section -->
+    <div id="description-section">
+        <h3>Personal Description</h3>
+        <p> <span id="description">Describe yourself, add anything you want people to know about you</span>
+           <span class="edit-icon" onclick="editField('description')"><i class="fas fa-edit"></i></span>
+        </p>
+    </div>
+</div>
+
+
+<script src="../JS/profilescripts.js"></script>
+</body>
+</html>
+

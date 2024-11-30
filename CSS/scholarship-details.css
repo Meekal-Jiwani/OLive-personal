@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/fonts/SF-Pro-Display-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    color: #333;
+    background-color: #f5f5f5; /* Add a subtle background color */
+}
+
+/* Sidebar styling */
+#sidebar {
+    width: 18vw;
+    background-color: #dcdcdc;
+    padding: 5vh 1.5vw;
+    position: fixed;
+    margin-top: 15vh;
+    height: 50vh;
+    border: 0.15vw;
+    border-radius: 4vh;
+    margin-left: 4vw;
+}
+
+#app-title {
+    font-size: 2.5rem;
+    color: #494C3A;
+    margin-bottom: 0vh;
+    margin-top: 5vh;
+    margin-left:10vh;
+    text-align: center;
+    position: fixed;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0vh;
+}
+
+#sidebar ul li {
+    padding: 0;
+    margin: 0.5vh 0;
+    font-size: 1.15rem;
+    font-weight: 500;
+    font-family: 'SF Pro', sans-serif;
+    border-radius: 0.5vw;
+}
+
+#sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 3vh;
+    text-decoration: none;
+    color: #494C3A;
+    gap: 2vw;
+    transition: background-color 0.2s ease;
+    border-radius: 2vh;
+}
+
+#sidebar ul li a:hover {
+    background-color: #e0e0e0;
+}
+
+#sidebar ul li a.active {
+    background-color: #494C3A;
+    color: #FFFFFF;
+}
+
+.icon {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-right: 1vw;
+    vertical-align: middle;
+}
+
+/* Main Content Container */
+#scholarship-details-container {
+    background-color: #dcdcdc;
+    border-radius: 2vw;
+    width: 60vw; /* Increased width */
+    min-height: 70vh; /* Adjusted height */
+    margin: 10vh auto; /* Center horizontally and add vertical margin */
+    padding: 4vh 3vw;
+    display: flex;
+    margin-left: 31vw;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header Section */
+#scholarship-header {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+#institution-logo-container {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    margin-top: 1vh;
+}
+
+#institution-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#scholarship-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5vh;
+}
+
+
+#institution-name-container a {
+    font-size: 1.5vw; /* Larger font size */
+    font-weight: bold; /* Keep it bold */
+    color: #494C3A; /* Apply the desired color */
+    text-decoration: none; /* Ensure no underline */
+    margin-top: 0; /* Adjust margin if needed */
+}
+
+#institution-name-container a:hover {
+    color: #333; /* Slightly darker color on hover */
+}
+
+
+#date-posted {
+    font-size: 0.9vw;
+    color: #777;
+    margin-top: 7vh;
+    margin-left: -18.5vw;
+}
+
+/* Scholarship Details List */
+#scholarship-details-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 8vh;
+}
+
+#scholarship-details-list li {
+    margin-bottom: 1vh;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+/* Apply Button */
+#apply-button {
+    background-color: #494C3A;
+    color: white;
+    border: none;
+    padding: 1vh 3vw;
+    font-size: 1rem;
+    border-radius: 2vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 18vh;
+}
+
+#apply-button:hover {
+    background-color: #333;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta settings for character encoding and viewport configuration -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- Page title -->
+    <title>OLive Sign-In Page</title>
+   
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="../CSS/signinstyles.css">
+</head>
+<body>
+    <!-- Main container for the sign-in form -->
+    <div class="container">
+        <h2>Sign In</h2>
+        <!-- Sign-In Form -->
+        <form id="signin-form" action="../PHP/signin.php" method="POST">
+            <!-- Email input field with placeholder -->
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="e.g. user@olive.com" required>
+
+
+            <!-- Password input field with toggle visibility feature -->
+            <label for="password">Password</label>
+            <div class="password-toggle">
+                <input type="password" id="password-signin" name="password" placeholder="e.g. OLive2024*" required>
+                <!-- Icon to toggle password visibility -->
+                <span class="toggle-icon" onclick="togglePassword('password-signin')">⬤</span>
+            </div>
+            <div class="credentials-management">
+                <div class="forgot-password">
+                    <a href="../PHP/forgot_password.php">Forgot Password?</a>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    <label for="rememberMe">Remember Me</label>
+                </div>
+            </div>
+            <!-- Submit button for form submission -->
+            <button type="submit" class="submit-btn">Sign In</button>
+
+        </form>
+
+
+        <!-- Footer section with link to Sign-Up page -->
+        <div class="footer">
+            <p>Don't have an account? <a href="../HTML/signup.html">Sign Up</a></p>
+        </div>
+    </div>
+
+
+    <!-- Centered bottom text bar for updates and copyright -->
+    <div class="center-bottom">
+        Last updated October 10, 2024.
+        &copy; 2024 OLive. All rights reserved.
+    </div>
+
+
+    <!-- Link to the external JavaScript file for functionality -->
+    <script src="../JS/signinscripts.js"></script>
+</body>
+</html>
+
+

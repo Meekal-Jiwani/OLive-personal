@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="../CSS/searchstyles.css">
+    <h1 id="app-title">OLive</h1>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div id="sidebar">
+    <ul>
+        <li><a href="feed.html"><img src="../images/home-icon.jpg" alt="Home Icon" class="icon"> Feed</a></li>
+        <li><a href="search.html" class="active"><img src="../images/search-icon.jpg" alt="Search Icon" class="icon"> Search</a></li>
+        <li><a href="notifications.html"><img src="../images/notification-bell-icon.jpg" alt="Notifications Icon" class="icon"> Notifications</a></li>
+        <li><a href="../PHP/profile.php"><img src="../images/three-horizontal-lines-icon.jpg" alt="Dashboard Icon" class="icon"> Dashboard</a></li>
+    </ul>
+</div>
+
+<!-- Main Section -->
+<div id="main-container">
+    <!-- Tabs -->
+    <div id="search-tabs">
+        <button id="institution-tab" class="tab active" onclick="switchTab('institution')">Institution</button>
+        <button id="scholarship-tab" class="tab" onclick="switchTab('scholarship')">Scholarship</button>
+    </div>
+
+    <!-- Institution Search Section -->
+    <div id="search-section">
+        <!-- Form for Institution Search -->
+        <form id="search-form" action="../PHP/search.php" method="POST" onsubmit="return fetchResults(event, 'institution')">
+            <input type="hidden" name="search_type" value="institution">
+            <input type="text" placeholder="Name" id="name-input" class="search-input" name="name" required>
+            <input type="text" placeholder="Address" id="address-input" class="search-input" name="address">
+            <button type="submit" id="search-institution-button" class="search-button">Search</button>
+        </form>
+        <div id="results-container" style="display: none;">
+            <!-- Example Institution Table -->
+        </div>
+    </div>
+    
+    <!-- Scholarship Search Section -->
+    <div id="scholarships-container" style="display: none;">
+        <!-- Form for Scholarship Search -->
+        <form id="scholarship-form" action="../PHP/search.php" method="POST"  onsubmit="return fetchResults(event, 'scholarship')">
+            <input type="hidden" name="search_type" value="scholarship">
+            <div class="form-row">
+                <input type="text" class="search-input" placeholder="Name" name="scholarship_name">
+                <input type="text" class="search-input" placeholder="Category" name="category">
+            </div>
+            <div class="form-row">
+                <input type="text" class="search-input" placeholder="Criteria" name="criteria">
+                <input type="text" class="search-input" placeholder="Grade Level" name="grade_level">
+            </div>
+            <button type="submit" id="search-scholarship-button" class="search-button">Search</button>
+        </form>
+        <div id="scholarship-results" style="display: none;">
+        </div>         
+    </div>
+</div>
+
+<script src="../JS/searchscripts.js"></script>
+</body>
+</html>

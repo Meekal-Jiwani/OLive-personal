@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarships</title>
+    <link rel="stylesheet" href="../CSS/setting2.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div id="sidebar">
+    <div id="profile-top">
+        <div id="sidebar-profile-image-container">
+            <img src="../images/sfu-logo.png" alt="Profile Image" id="sidebar-profile-image">
+        </div>
+        <h2 id="University">Simon Fraser University</h2>
+    </div>
+    <ul>
+        <li><a href="Uniprofile.html"><img src="../images/user.png" alt="Profile Icon" class="icon"> Profile</a></li>
+        <li ><a href="scholarships.html"><img src="../images/resume.png" alt="Applications Icon" class="icon"> Scholarships</a></li>
+        <li ><a href="post-scholarship.html"><img src="../images/document.png" alt="post-scholarship Icon" class="icon"> Post a new scholarship</a></li>
+        <li class="active"><a href="settings2.html"><img src="../images/setting.png" alt="Settings Icon" class="icon"> Settings</a></li>
+        <li><a href="contactus2.html"><img src="../images/chat.png" alt="Contact Us Icon" class="icon"> Contact Us</a></li>
+    </ul>
+    <a href="../HTML/front.html" id="sign-out" class="button-link">Sign Out</a>
+</div>
+
+<div id="settings-section">
+    <h2>Settings</h2>
+
+    <!-- Theme Switch Section -->
+    <div class="settings-card">
+        <span>Light mode</span>
+        <label class="switch">
+            <input type="checkbox" id="theme-switch">
+            <span class="slider round"></span>
+        </label>
+        <span>Dark mode</span>
+    </div>
+
+    <!-- Account Info Section -->
+    <div class="settings-card account-info">
+        <p>Email address : <span id="email-display">youremail@doe.com</span> 
+            <span class="change-link" onclick="changeEmail()">Change</span>
+        </p>
+        <p>Password: <span>*******</span><span class="change-link" onclick="changePassword()">Change</span></p>
+
+    </div>
+
+    <!-- Language Selection Section -->
+    <div class="settings-card language-section">
+        <p>Language: English <span class="globe-icon" onclick="toggleLanguageDropdown()">🌐</span></p>
+        
+        <!-- Language Dropdown Menu (Initially hidden) -->
+        <div id="language-dropdown" class="dropdown-content">
+            <p onclick="selectLanguage('English')">English</p>
+            <p onclick="selectLanguage('Spanish')">Spanish</p>
+            <p onclick="selectLanguage('French')">French</p>
+            <p onclick="selectLanguage('German')">German</p>
+            <p onclick="selectLanguage('Chinese')">Chinese</p>
+            <p onclick="selectLanguage('Arabic')">Arabic</p>
+        </div>
+    </div>
+
+    <!-- Delete Account Section -->
+    <button id="delete-account">Delete account</button>
+</div>
+
+<!-- Email Change Modal -->
+<div id="change-email-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('change-email-modal')">&times;</span>
+        <h3>Change Email</h3>
+        <label for="new-email">New Email:</label>
+        <input type="email" id="new-email" placeholder="Enter new email">
+        <button onclick="saveNewEmail()">Save</button>
+    </div>
+</div>
+<!-- Password Change Modal -->
+<div id="change-password-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('change-password-modal')">&times;</span>
+        <h3>Change Password</h3>
+        <label for="new-password">New Password:</label>
+        <input type="password" id="new-password" placeholder="Enter new password">
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" placeholder="Confirm new password">
+        <button onclick="saveNewPassword()">Save</button>
+    </div>
+</div> 
+
+<script src="../JS/settings2.js"></script>
+</body>
+</html>

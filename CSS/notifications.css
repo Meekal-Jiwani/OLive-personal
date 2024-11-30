@@ -1,0 +1,297 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/fonts/SF-Pro-Display-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Sidebar styling */
+#sidebar {
+    width: 18vw;
+    background-color: #dcdcdc;
+    padding: 5vh 1.5vw;
+    position: fixed;
+    margin-top: 15vh;
+    height: 50vh;
+    border: 0.15vw solid #e0e0e0;
+    border-radius: 4vh;
+    margin-left: 4vw;
+}
+
+#app-title {
+    font-size: 2.5rem;
+    color: #494C3A;
+    margin-bottom: 0vh;
+    margin-top: 5vh;
+    margin-left:10vh;
+    text-align: center;
+    position: fixed;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0vh;
+}
+
+#sidebar ul li {
+    padding: 0;
+    margin: 0.5vh 0;
+    font-size: 1.15rem;
+    font-weight: 500;
+    font-family: 'SF Pro', sans-serif;
+    border-radius: 0.5vw;
+}
+
+#sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 3vh;
+    text-decoration: none;
+    color: #494C3A;
+    gap: 2vw;
+    transition: background-color 0.2s ease;
+    border-radius: 2vh;
+}
+
+#sidebar ul li a:hover {
+    background-color: #e0e0e0;
+}
+
+#sidebar ul li a.active {
+    background-color: #494C3A;
+    color: #FFFFFF;
+}
+
+.icon {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-right: 1vw;
+    vertical-align: middle;
+}
+
+/* Notifications Container */
+#notifications-container {
+    margin-left: 33vw;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 60vw;
+}
+
+/* Individual Notification Styling */
+.notification-box {
+    background-color: #dcdcdc;
+    padding: 2vh 3vw;
+    border-radius: 2vw;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#notification-logo {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    overflow: hidden;
+}
+
+#notification-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.notification-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+    color: #333;
+}
+
+.notification-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.notification-date {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.notification-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+/* Remove underline for institution name link */
+.notification-content .notification-title {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Ensures it uses the default text color */
+    font-size: 1.2rem; /* Adjusts font size to match */
+    font-weight: bold; /* Keeps the bold styling */
+}
+
+/* Optional: Add hover effect for better interactivity */
+.notification-content .notification-title:hover {
+    color: #494C3A; /* Slightly darker or highlighted color on hover */
+    text-decoration: none; /* Ensures underline doesn't reappear */
+}
+
+
+.dark-theme {
+    background-color: #121212; /* Overall dark background */
+    color: #E0E0E0; /* Default text color for dark theme */
+}
+
+/* App Title */
+.dark-theme #app-title {
+    color: #FFFFFF; /* White text for the app title */
+}
+
+/* Sidebar */
+.dark-theme #sidebar {
+    background-color: #1E1E1E; /* Darker background for the sidebar */
+    border-color: #333333; /* Subtle border color */
+    color: #E0E0E0; /* Light text for sidebar items */
+}
+
+.dark-theme #sidebar ul li a {
+    color: #E0E0E0; /* Light text for links */
+}
+
+.dark-theme #sidebar ul li a:hover {
+    background-color: #333333; /* Slightly darker hover effect */
+}
+
+.dark-theme #sidebar ul li a.active {
+    background-color: #555555; /* Active item background */
+    color: #FFFFFF; /* White text for active item */
+}
+
+.dark-theme .icon {
+    filter: brightness(0.8); /* Dim icons slightly for dark mode */
+}
+
+/* Notifications Container */
+.dark-theme #notifications-container {
+    background-color: #121212; /* Match the overall dark background */
+}
+
+.dark-theme .notification-box {
+    background-color: #1E1E1E; /* Dark background for each notification */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+    border: 1px solid #333333; /* Border for better separation */
+}
+
+.dark-theme #notification-logo {
+    background-color: #333333; /* Dark background for logo container */
+}
+
+.dark-theme .notification-content {
+    color: #E0E0E0; /* Light text for notification content */
+}
+
+.dark-theme .notification-title {
+    color: #FFFFFF; /* White text for titles */
+}
+
+.dark-theme .notification-date {
+    color: #888888; /* Dimmed text for dates */
+}
+
+.dark-theme .notification-text {
+    color: #CCCCCC; /* Light gray text for notification body */
+}
+
+/* Scrollbar Styling (Optional) */
+.dark-theme ::-webkit-scrollbar {
+    width: 12px;
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+    background: #1E1E1E; /* Dark background for scrollbar track */
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+    background: #555555; /* Scrollbar thumb color */
+    border-radius: 6px;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+    background: #666666; /* Hover effect for scrollbar thumb */
+}
+
+/* Buttons (General) */
+.dark-theme button {
+    background-color: #333333; /* Dark button background */
+    color: #E0E0E0; /* Light text for contrast */
+    border: 1px solid #555555; /* Subtle border */
+}
+
+.dark-theme button:hover {
+    background-color: #555555; /* Lighter background on hover */
+    color: #FFFFFF; /* White text for better contrast */
+}
+
+/* Links */
+.dark-theme a {
+    color: #9AB8FF; /* Light blue links */
+}
+
+.dark-theme a:hover {
+    color: #4A90E2; /* Brighter blue on hover */
+}
+
+/* Inputs (General) */
+.dark-theme input,
+.dark-theme textarea {
+    background-color: #1E1E1E; /* Dark background for input fields */
+    color: #E0E0E0; /* Light text color */
+    border: 1px solid #333333; /* Subtle border for input fields */
+}
+
+.dark-theme input:focus,
+.dark-theme textarea:focus {
+    border-color: #555555; /* Highlighted border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Forms and Modals */
+.dark-theme .modal {
+    background-color: #1E1E1E; /* Dark background for modals */
+    color: #E0E0E0; /* Light text */
+}
+
+.dark-theme .modal button {
+    background-color: #333333;
+    color: #E0E0E0;
+    border: 1px solid #555555;
+}
+
+.dark-theme .modal button:hover {
+    background-color: #555555;
+}
+
+/* Miscellaneous */
+.dark-theme .notification-box:hover {
+    background-color: #333333; /* Slightly lighter on hover */
+}
+
+.dark-theme .settings-card {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    border: 1px solid #333333;
+}

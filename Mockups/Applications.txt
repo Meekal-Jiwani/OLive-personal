@@ -1,0 +1,15 @@
+How to link the applications page rough ideas
+
+1. First a user must log in, based on their roles (for example if it is a student), they will be directed to the feed.
+2. The feed is where all the applications are shown. (The applications will be shown from postings from institutions)
+3. Once a user clicks on an application they are taken to that application link.
+4. From that application link a user can apply and send in the relevant document package needed (This application will be saved and stored into database
+under that scholarship id.)
+5. After a user sends in that application (application should be saved in applications table under each user_id), 
+the institution can grab it, download it, and assess it.
+6. Once a user applies, they should see their application in their dashboard (in applications tab).
+7. The application can either be "In progress," "Denied", or "Approved." 
+8. After an institution approves or denies it, it should be updated in the applications page in student dashboard
+
+
+Second step should be posting the scholarship from the uniprofilepage.html

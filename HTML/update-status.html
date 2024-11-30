@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Application Status</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add your stylesheet here -->
+    <script src="applications.js" defer></script>
+</head>
+<body>
+    <form id="updateStatusForm">
+        <input type="hidden" name="application_id" value="1"> <!-- Replace with dynamic application ID -->
+        <label for="status">Status:</label>
+        <select name="status" id="status">
+            <option value="Approved">Approve</option>
+            <option value="Denied">Deny</option>
+        </select>
+        <label for="reason">Reason:</label>
+        <textarea name="reason" id="reason" placeholder="Reason for rejection (optional)"></textarea>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

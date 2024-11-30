@@ -1,0 +1,335 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/fonts/SF-Pro-Display-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    color: #333;
+}
+
+/* Sidebar styling */
+#sidebar {
+    width: 18vw;
+    background-color: #dcdcdc;
+    padding: 5vh 1.5vw;
+    position: fixed;
+    margin-top: 15vh;
+    height: 50vh;
+    border: 0.15vw ;
+    border-radius: 4vh;
+    margin-left: 4vw;
+}
+
+#app-title {
+    font-size: 2.5rem;
+    color: #494C3A;
+    margin-bottom: 0vh;
+    margin-top: 5vh;
+    margin-left:10vh;
+    text-align: center;
+    position: fixed;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0vh;
+}
+
+#sidebar ul li {
+    padding: 0;
+    margin: 0.5vh 0;
+    font-size: 1.15rem;
+    font-weight: 500;
+    font-family: 'SF Pro', sans-serif;
+    border-radius: 0.5vw;
+}
+
+#sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 3vh;
+    text-decoration: none;
+    color: #494C3A;
+    gap: 2vw;
+    transition: background-color 0.2s ease;
+    border-radius: 2vh;
+}
+
+#sidebar ul li a:hover {
+    background-color: #e0e0e0;
+}
+
+
+.icon {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-right: 1vw;
+    vertical-align: middle;
+}
+
+
+#main-container {
+    background-color: #FFFFFF;
+    width: calc(100% - 18vw);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    gap: 3vh; /* Space between feed boxes */
+    margin-left: 30vw;
+    padding-bottom: 5vh;
+}
+
+
+.banner-info {
+    background-color: #bebebe;
+    border-radius: 2vw;
+    border-bottom-left-radius: 0vw;
+    border-bottom-right-radius: 0vw;
+    width: 55vw;
+    height: 35vh;
+    margin-top: 0vh;
+    margin-left: 7.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#banner-profile-image {
+    width: 100%; /* Ensures the image covers the full width of its container */
+    height: 100%; /* Adjusts the height proportionally to maintain the aspect ratio */
+    object-fit: cover; /* Ensures the entire image is visible within the container */
+    object-position: center; /* Centers the image within the container */
+    display: block; /* Avoids inline spacing issues */
+}
+
+
+
+.institution-info{
+    background-color: #D9D9D9;
+    border-radius: 2vw;
+    border-top-left-radius: 0vw;
+    border-top-right-radius: 0vw;
+    width: 49vw;
+    height: 35vh;
+    margin-top: -3vh;
+    margin-left: 7.5vw;
+    padding: 2vh 3vw;
+    display: absolute;
+    align-items: flex-start; /* Align content at the top */
+    gap: 2vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+#institution-logo-image-container {
+    width: 8vw; /* Increase size for better visibility */
+    height: 8vw;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -9vh; /* Adjust position for alignment */
+    left: 2vw;
+}
+
+#institution-logo-image {
+    width: 100%; /* Cover the container fully */
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+    border-radius: 50%; /* Ensure it remains circular */
+}
+
+
+/* Styling for Institution Details Container */
+.institution-details {
+    display: flex;
+    flex-direction: column; /* Stack name and description vertically */
+    justify-content: center; /* Center align within the container */
+    gap: 1.5vh; /* Add vertical spacing between elements */
+    margin-left: 10vw; /* Adjust to create space between logo and text */
+    color: #ffffff; /* Ensure text is readable */
+}
+
+/* Styling for Institution Name */
+.institution-name {
+    font-size: 2vw; /* Adjust size for responsiveness */
+    font-weight: bold;
+    color: #000000; /* White text for good contrast */
+    margin: 0;
+    padding: 0;
+    margin-top: -16vh;
+    margin-left: 2vw;
+    line-height: 1.2; /* Adjust line height for better readability */
+    text-transform: capitalize; /* Capitalize each word for a polished look */
+}
+
+/* Styling for Institution Description (Bio) */
+.institution-description {
+    font-size: 1.2vw; /* Slightly smaller than the name */
+    color: #000000; /* Light gray for subtle text */
+    margin-top: 7vh; /* Add spacing from the name */
+    line-height: 1.25; /* Improve readability */
+    margin-left: -10vw;
+}
+
+
+
+.feed-box {
+    background-color: #dcdcdc;
+    border-radius: 2vw;
+    width: 70%;
+    height: 30vh;
+    margin: 0 auto;
+    padding: 2vh 3vw;
+    display: flex;
+    align-items: flex-start; /* Align content at the top */
+    gap: 2vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+#feed-profile-image-container {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 3vh;
+}
+
+#feed-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feed-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1vh;
+    color: #000000;
+    margin-top: 4.5vh;
+}
+
+.feed-header {
+    font-size: 1.2vw;
+    color: #494C3A;
+    font-weight: bold;
+}
+
+.feed-subheader {
+    font-size: 1vw;
+    color: #777;
+    margin-top: -0.5vh;
+}
+
+.feed-details ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -6.5vw;
+    margin-top: 3vh;
+}
+
+.feed-details li {
+    font-size: 1vw;
+    line-height: 1.5;
+}
+
+.dark-theme {
+    background-color: #121212; /* Dark background for the body */
+    color: #E0E0E0; /* Light text for contrast */
+}
+.dark-theme #app-title {
+    color: white;
+}
+
+.dark-theme #sidebar {
+    background-color: #1E1E1E; /* Dark sidebar background */
+    border-color: #333333; /* Adjust border color */
+    color: #E0E0E0; /* Light text for the sidebar */
+}
+
+.dark-theme #sidebar ul li a {
+    color: #E0E0E0; /* Light text for sidebar links */
+}
+
+.dark-theme #sidebar ul li a:hover {
+    background-color: #333333; /* Dark hover effect */
+}
+
+.dark-theme #sidebar ul li a.active {
+    background-color: #555555; /* Highlight active item */
+    color: #FFFFFF; /* Active text color */
+}
+
+.dark-theme .icon {
+    filter: brightness(0.8); /* Dim icons slightly for dark mode */
+}
+
+.dark-theme #main-container {
+    background-color: #121212; /* Dark background for main content */
+}
+
+.dark-theme .institution-info{
+    background-color: #2A2A2A;
+}
+
+.dark-theme .institution-name{
+    color: #FFFFFF;
+}
+
+.dark-theme .institution-description{
+    color: #FFFFFF;
+}
+
+.dark-theme .feed-box {
+    background-color: #2A2A2A; /* Dark background for feed box */
+    border-color: #444444; /* Adjust border color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adjust shadow for dark theme */
+    color: #E0E0E0; /* Light text for content */
+}
+
+.dark-theme #feed-profile-image-container {
+    border: 2px solid #444444; /* Add a border for better visibility in dark mode */
+}
+
+.dark-theme .feed-content {
+    color: #E0E0E0; /* Light text for feed content */
+}
+
+.dark-theme .feed-header {
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: #FFFFFF; /* Bright header text */
+}
+
+.dark-theme .feed-subheader {
+    font-size: 1vw;
+    color: #AAAAAA; /* Subtle text for subheader */
+}
+
+.dark-theme .feed-details ul {
+    margin-left: -6.5vw;
+    margin-top: 2vh;
+}
+
+.dark-theme .feed-details li {
+    font-size: 1vw;
+    line-height: 1.5;
+    color: #CCCCCC; /* Light text for details */
+}
+
+.dark-theme #feed-profile-image {
+    filter: brightness(1); /* Ensure images remain visually clear */
+}

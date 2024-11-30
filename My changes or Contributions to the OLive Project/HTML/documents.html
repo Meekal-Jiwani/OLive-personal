@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents</title>
+    <link rel="stylesheet" href="../CSS/documentsstyles.css">
+</head>
+<body>
+
+<!-- Sidebar Section -->
+<div id="sidebar">
+    <div id="profile-top">
+        <div id="sidebar-profile-image-container">
+            <img src="../images/profile.png" alt="Profile Image" id="sidebar-profile-image">
+        </div>
+        <h2 id="student-name">John Doe</h2>
+    </div>
+    <ul>
+        <li><a href="../HTML/profile.html"><img src="../images/user.png" alt="Profile Icon" class="icon"> Profile</a></li>
+        <li><a href="feed.html"><img src="../images/apply.webp" alt="Apply now Icon" class="icon"> Apply Now!</a></li>
+        <li><a href="applications.html"><img src="../images/resume.png" alt="Applications Icon" class="icon"> Applications</a></li>
+        <li class="active"><a href="documents.html"><img src="../images/document.png" alt="Documents Icon" class="icon"> Documents</a></li>
+        <li><a href="settings.html"><img src="../images/setting.png" alt="Settings Icon" class="icon"> Settings</a></li>
+        <li><a href="contactus.html"><img src="../images/chat.png" alt="Contact Us Icon" class="icon"> Contact Us</a></li>
+    </ul>
+    <a href="../HTML/front.html" id="sign-out" class="button-link">Sign Out</a>
+</div>
+
+<!-- Documents Section -->
+<!-- Documents Section -->
+<div id="documents-section">
+    <h2>Documents</h2>
+    
+    <!-- Relevant Links Section -->
+    <div class="documents-card">
+        <h3>Relevant Links :</h3>
+        <p>Attach links that provide an overview of the educational system of your country, which in turn provides a starting point for understanding your qualifications.</p>
+        <span class="add-icon" onclick="openModal('link-modal')">+</span>
+        <div id="links-container">
+            <!-- Links will be dynamically added here -->
+        </div>
+    </div>
+    
+    <!-- Relevant Documents Section -->
+    <div class="documents-card">
+        <h3>Relevant Documents :</h3>
+        <p>Attach documents that provide an overview of the educational system of your country, which can help in understanding your qualifications. You may also add transcripts.</p>
+        <span class="add-icon" onclick="openModal('document-modal')">+</span>
+        <div id="documents-container">
+            <!-- Documents will be dynamically added here -->
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Adding Links -->
+<div id="link-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('link-modal')">&times;</span>
+        <h3>Add Relevant Link</h3>
+        <label for="link-title">Title:</label>
+        <input type="text" id="link-title" placeholder="Enter title">
+        <label for="link-url">Link:</label>
+        <input type="url" id="link-url" placeholder="Enter link URL">
+        <button onclick="addLink()">Add Link</button>    </div>
+</div>
+
+
+<!-- Modal for Adding Documents -->
+<div id="document-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('document-modal')">&times;</span>
+        <h3>Add Relevant Document</h3>
+        <label for="document-title">Title:</label>
+        <input type="text" id="document-title" placeholder="Enter title">
+        <label for="document-file">Document:</label>
+        <input type="file" id="document-file" accept=".pdf,.doc,.docx,.jpg,.png">
+        <button onclick="addDocument()">Add Document</button>
+    </div>
+</div>
+
+<script src="../JS/documentsscripts.js"></script>
+</body>
+</html>

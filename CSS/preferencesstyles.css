@@ -1,0 +1,105 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/fonts/SF-Pro-Display-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Preferences Container */
+.preferences-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh 0;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+}
+
+/* Header Styling */
+.preferences-container h1 {
+    font-size: 1.5vw;
+    color: #000000;
+    margin-bottom: 3vh;
+    line-height: 1.4; /* Adjust line spacing */
+    text-align: center;
+}
+
+.header-subtitle {
+    font-size: 1.5vw; /* Slightly smaller for the second line */
+    color: #000000; /* Optional: lighter color for contrast */
+}
+
+
+/* Categories Container */
+#categories {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh; /* Space between rows */
+    max-width: 70vw;
+    justify-content: center;
+}
+
+/* Row Styling */
+.row {
+    display: flex;
+    justify-content: center; /* Center items in the row */
+    gap: 1vw; /* Space between categories */
+}
+
+/* Category Button */
+.category {
+    padding: 1vh 2vw;
+    background-color: #D3D3D3;
+    border-radius: 10vw;
+    text-align: center;
+    width: 20vw; /* Equal width for all categories */
+    cursor: pointer;
+    font-size: 1vw;
+    color: #494C3A;
+    user-select: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.category:hover {
+    background-color: #C0C0C0;
+}
+
+.category.selected {
+    background-color: #494C3A;
+    color: #FFFFFF;
+}
+
+/* Launch Button */
+#launch-button {
+    margin-top: 3vh;
+    font-size: 1.5vw;
+    color: #494C3A;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#launch-button:hover {
+    color: #3E4432;
+}

@@ -1,0 +1,270 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/fonts/SF-Pro-Display-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    color: #333;
+}
+
+/* Sidebar styling */
+#sidebar {
+    width: 18vw;
+    background-color: #dcdcdc;
+    padding: 5vh 1.5vw;
+    position: fixed;
+    margin-top: 15vh;
+    height: 50vh;
+    border: 0.15vw ;
+    border-radius: 4vh;
+    margin-left: 4vw;
+}
+
+#app-title {
+    font-size: 2.5rem;
+    color: #494C3A;
+    margin-bottom: 0vh;
+    margin-top: 5vh;
+    margin-left:10vh;
+    text-align: center;
+    position: fixed;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0vh;
+}
+
+#sidebar ul li {
+    padding: 0;
+    margin: 0.5vh 0;
+    font-size: 1.15rem;
+    font-weight: 500;
+    font-family: 'SF Pro', sans-serif;
+    border-radius: 0.5vw;
+}
+
+#sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 3vh;
+    text-decoration: none;
+    color: #494C3A;
+    gap: 2vw;
+    transition: background-color 0.2s ease;
+    border-radius: 2vh;
+}
+
+#sidebar ul li a:hover {
+    background-color: #e0e0e0;
+}
+
+#sidebar ul li a.active {
+    background-color: #494C3A;
+    color: #FFFFFF;
+}
+
+.icon {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-right: 1vw;
+    vertical-align: middle;
+}
+
+
+#main-container {
+    background-color: #FFFFFF;
+    width: calc(100% - 18vw);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    gap: 3vh; /* Space between feed boxes */
+    margin-left: 30vw;
+    padding-bottom: 5vh;
+}
+
+/* Make the feed box clickable */
+.feed-box {
+    background-color: #dcdcdc;
+    border-radius: 2vw;
+    width: 70%;
+    height: 30vh;
+    margin: 0 auto;
+    padding: 2vh 3vw;
+    display: flex;
+    align-items: flex-start; /* Align content at the top */
+    gap: 2vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    text-decoration: none; /* Remove link underlines */
+    color: inherit; /* Inherit the text color */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feed-box:hover {
+    background-color: #a9ba9d; /* Subtle hover effect */
+}
+
+/* For dark mode */
+.dark-theme .feed-box {
+    background-color: #2A2A2A; /* Dark background for feed box */
+    color: #E0E0E0; /* Light text for content */
+}
+
+.dark-theme .feed-box:hover {
+    background-color: #494C3A; /* Hover effect in dark mode */
+}
+
+
+#feed-profile-image-container {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 3vh;
+}
+
+#feed-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feed-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1vh;
+    color: #000000;
+    margin-top: 3.5vh;
+}
+
+.feed-header {
+    font-size: 1.8vw;
+    font-weight: bold;
+    margin-left: -0.5vw;
+}
+
+.feed-subheader {
+    font-size: 1vw;
+    color: #777;
+    margin-top: -1vh;
+    margin-left: -0.5vw;
+}
+
+.feed-details ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -6.5vw;
+    margin-top: 3.5vh;
+}
+
+.feed-details li {
+    font-size: 1vw;
+    line-height: 1.5;
+}
+
+/* Feed Header Link Styling */
+.feed-header-link {
+    text-decoration: none;
+    color: #494C3A;
+    font-weight: bold;
+    font-size: 1.5vw;
+    transition: color 0.3s ease;
+}
+
+.feed-header-link:hover {
+    color: #777;
+}
+
+/* Feed Image Link Styling */
+#feed-profile-image-container a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+.dark-theme {
+    background-color: #121212; /* Dark background for the body */
+    color: #E0E0E0; /* Light text for contrast */
+}
+.dark-theme #app-title {
+    color: white;
+}
+
+.dark-theme #sidebar {
+    background-color: #1E1E1E; /* Dark sidebar background */
+    border-color: #333333; /* Adjust border color */
+    color: #E0E0E0; /* Light text for the sidebar */
+}
+
+.dark-theme #sidebar ul li a {
+    color: #E0E0E0; /* Light text for sidebar links */
+}
+
+.dark-theme #sidebar ul li a:hover {
+    background-color: #333333; /* Dark hover effect */
+}
+
+.dark-theme #sidebar ul li a.active {
+    background-color: #555555; /* Highlight active item */
+    color: #FFFFFF; /* Active text color */
+}
+
+.dark-theme .icon {
+    filter: brightness(0.8); /* Dim icons slightly for dark mode */
+}
+
+.dark-theme #main-container {
+    background-color: #121212; /* Dark background for main content */
+}
+
+.dark-theme .feed-box {
+    background-color: #2A2A2A; /* Dark background for feed box */
+    border-color: #444444; /* Adjust border color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adjust shadow for dark theme */
+    color: #E0E0E0; /* Light text for content */
+}
+
+.dark-theme #feed-profile-image-container {
+    border: 2px solid #444444; /* Add a border for better visibility in dark mode */
+}
+
+.dark-theme .feed-content {
+    color: #E0E0E0; /* Light text for feed content */
+}
+
+.dark-theme .feed-header {
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: #FFFFFF; /* Bright header text */
+}
+
+.dark-theme .feed-subheader {
+    font-size: 1vw;
+    color: #AAAAAA; /* Subtle text for subheader */
+}
+
+.dark-theme .feed-details ul {
+    margin-left: -6.5vw;
+    margin-top: 2vh;
+}
+
+.dark-theme .feed-details li {
+    font-size: 1vw;
+    line-height: 1.5;
+    color: #CCCCCC; /* Light text for details */
+}
+
+.dark-theme #feed-profile-image {
+    filter: brightness(1); /* Ensure images remain visually clear */
+}

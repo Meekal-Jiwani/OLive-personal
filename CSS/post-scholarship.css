@@ -1,0 +1,462 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/fonts/SF-Pro-Display-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Global styling */
+body {
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    color: #333;
+}
+
+/* Sidebar styling */
+#sidebar {
+    width: 20vw; /* Adjusted to viewport width */
+    background-color: #FFFFFF;
+    padding: 2vh 1vw;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 0.2vw 0 0.5vw rgba(0, 0, 0, 0.1);
+}
+
+#profile-top {
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    margin-bottom: 3vh;
+}
+
+#sidebar-profile-image-container {
+    width: 10vw;
+    height: 11vh;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 1.5vw;
+}
+
+#sidebar-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#University-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.button-link {
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: 3vh auto;
+    padding: 1vh;
+    border: 0.1vw solid #494C3A;
+    border-radius: 0.5vw;
+    color: #494C3A;
+    background: transparent;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-link:hover {
+    background-color: #A9BA9D;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 3vh;
+}
+
+#sidebar ul li {
+    padding: 0; /* Remove padding from li */
+    margin: 0.5vh 0;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+#sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 2vh;
+    width: 100%; /* Make anchor fill the li element */
+    text-decoration: none;
+    color: inherit;
+    gap: 0.5vw;
+    transition: background-color 0.2s ease;
+}
+
+#sidebar ul li a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Active link styling */
+#sidebar ul li.active a {
+    background-color: #494C3A;
+    color: white;
+}
+
+.icon {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-right: 1vw;
+    vertical-align: middle;
+}
+
+/* Profile Info styling */
+#new-info {
+    margin-left: 22vw;
+    padding: 0vh 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5vh;
+    width: calc(100% - 22vw);
+}
+
+
+#new-info h2 {
+    font-size: 2vw;
+    color: #494C3A;
+    margin-bottom: 2vh;
+}
+/* Main Content Container */
+#scholarship-details-container {
+    background-color: #dcdcdc;
+    border-radius: 2vw;
+    width: 60vw; /* Increased width */
+    min-height: 70vh; /* Adjusted height */
+    padding: 4vh 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header Section */
+#scholarship-header {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+#institution-logo-container {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    margin-top: 1vh;
+}
+
+#institution-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#scholarship-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5vh;
+}
+
+
+#institution-name-container a {
+    font-size: 1.5vw; /* Larger font size */
+    font-weight: bold; /* Keep it bold */
+    color: #494C3A; /* Apply the desired color */
+    text-decoration: none; /* Ensure no underline */
+    margin-top: 0; /* Adjust margin if needed */
+}
+
+#institution-name-container a:hover {
+    color: #333; /* Slightly darker color on hover */
+}
+
+
+#date-posted {
+    font-size: 0.9vw;
+    color: #777;
+    margin-top: 7vh;
+    margin-left: -18.5vw;
+}
+
+/* Scholarship Details List */
+#scholarship-details-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    font-size: 1.2vw;
+    margin-top: 8vh;
+}
+
+#scholarship-details-list li {
+    margin-bottom: 1vh;
+    line-height: 1.5;
+    font-size: 1vw;
+}
+
+/* Apply Button */
+#apply-button {
+    background-color: #494C3A;
+    color: white;
+    border: none;
+    padding: 1vh 3vw;
+    font-size: 1vw;
+    border-radius: 2vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 18vh;
+}
+
+#apply-button:hover {
+    background-color: #333;
+}
+
+.edit-icon {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.edit-icon:hover {
+    color: #A9BA9D;
+}
+
+.edit-input {
+    background-color: #FFFFFF;
+    width: calc(100% - 4vw);
+    padding: 1vh;
+    margin: 1vh 0;
+    border: 0.1vw solid #ccc;
+    border-radius: 1vw;
+    font-size: 1vw;
+    color: rgb(49, 49, 49); /* Light gray text color */
+}
+
+
+.save-button {
+    background-color: #494C3A;
+    color: #FFFFFF;
+    padding: 1vh 2vw;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    margin-top: 1vh;
+}
+
+.save-button:hover {
+    background-color: #A9BA9D;
+}
+
+.edit-icon.disabled {
+    color: #ccc; /* Greyed-out icon */
+    cursor: not-allowed; /* Disabled cursor style */
+}
+
+/* Form Link Container */
+#form-link-container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center-align input and button */
+    gap: 1vh; /* Add spacing between the input and button */
+    width: 25vw; /* Adjust to container width */
+    margin-top: 3vh; /* Add margin above */
+
+}
+
+#form-link {
+    color: #1A1A1A;
+    flex-grow: 1;
+    padding: 1vw;
+    font-size: 1vw;
+    border: 1px solid #ccc;
+    border-radius: 10vw;
+    text-align: center;
+}
+
+
+
+/* Button Wrapper (Ensures proper placement) */
+#button-wrapper {
+    display: flex;
+    justify-content: center; /* Center-align button */
+    width: 100%; /* Make it stretch to fit the container */
+}
+
+/* Post Scholarship Button Styling */
+#post-button {
+    background-color: #494C3A;
+    color: white;
+    border: none;
+    padding: 1vh 2vw;
+    font-size: 1vw;
+    border-radius: 1vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#post-button:hover {
+    background-color: #333;
+}
+
+
+/* General Dark Theme */
+.dark-theme {
+    background-color: #1A1A1A;
+    color: #EAEAEA;
+}
+
+/* Sidebar */
+.dark-theme #sidebar {
+    background-color: #333333;
+    box-shadow: 0.2vw 0 0.5vw rgba(0, 0, 0, 0.4); /* Darker shadow */
+}
+
+.dark-theme #sidebar ul li a {
+    color: #EAEAEA;
+}
+
+.dark-theme #sidebar ul li a:hover {
+    background-color: #494C3A; /* Olive hover */
+}
+
+.dark-theme #sidebar ul li.active a {
+    background-color: #A9BA9D; /* Highlight active */
+    color: #1A1A1A;
+}
+
+/* Sidebar Profile Image */
+.dark-theme #sidebar-profile-image-container {
+    background-color: #444444; /* Darker background for profile container */
+}
+
+.dark-theme #sidebar-profile-image {
+    filter: brightness(1); /* Ensures image isn't too dark */
+}
+
+/* Profile Info */
+.dark-theme #new-info h2 {
+    color: #FFFFFF;
+}
+
+/* Main Container */
+.dark-theme #scholarship-details-container {
+    background-color: #333333; /* Darker background for scholarship details */
+    border: 1px solid #444444; /* Optional border for contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adjusted shadow for dark theme */
+}
+
+/* Header Section */
+.dark-theme #scholarship-header {
+    color: #EAEAEA;
+}
+
+.dark-theme #institution-logo-container {
+    background-color: #444444;
+}
+
+.dark-theme #institution-logo {
+    filter: brightness(1); /* Keep logo image clear */
+}
+
+.dark-theme #institution-name-container a {
+    color: #EAEAEA;
+}
+
+.dark-theme #institution-name-container a:hover {
+    color: #A9BA9D; /* Olive hover effect */
+}
+
+/* Scholarship Details List */
+.dark-theme #scholarship-details-list li {
+    color: #CCCCCC;
+}
+
+/* Apply Button */
+.dark-theme #apply-button {
+    background-color: #494C3A; /* Olive */
+    color: #EAEAEA;
+}
+
+.dark-theme #apply-button:hover {
+    background-color: #A9BA9D;
+    color: #1A1A1A;
+}
+
+/* Form Link Container */
+.dark-theme #form-link {
+    background-color: #444444;
+    color: #EAEAEA;
+    border: 1px solid #555555;
+}
+
+.dark-theme #post-button {
+    background-color: #494C3A;
+    color: #EAEAEA;
+}
+
+.dark-theme #post-button:hover {
+    background-color: #A9BA9D;
+    color: #1A1A1A;
+}
+
+/* Edit Icons */
+.dark-theme .edit-icon {
+    color: #CCCCCC; /* Lighter gray */
+}
+
+.dark-theme .edit-icon:hover {
+    color: #A9BA9D; /* Olive hover */
+}
+
+/* Inputs */
+.dark-theme .edit-input {
+    background-color: #333333;
+    color: #EAEAEA;
+    border: 1px solid #555555;
+}
+
+.dark-theme .save-button {
+    background-color: #494C3A;
+    color: #EAEAEA;
+}
+
+.dark-theme .save-button:hover {
+    background-color: #A9BA9D;
+    color: #1A1A1A;
+}
+
+/* Button Link */
+.dark-theme .button-link {
+    border-color: #FF6666; /* Light red border */
+    color: #FF6666;
+}
+
+.dark-theme .button-link:hover {
+    background-color: #FF6666;
+    color: #1A1A1A; /* Contrast for readability */
+}
+
+/* General Typography */
+.dark-theme body {
+    color: #EAEAEA;
+}
+
+/* Shadows for Better Depth */
+.dark-theme #scholarship-details-container,
+.dark-theme #sidebar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,463 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/fonts/SF-Pro-Display-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+/* Global styling */
+body {
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    color: #333;
+}
+
+/* Sidebar styling */
+#sidebar {
+    width: 20vw; /* Adjusted to viewport width */
+    background-color: #FFFFFF;
+    padding: 2vh 1vw;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 0.2vw 0 0.5vw rgba(0, 0, 0, 0.1);
+}
+
+#profile-top {
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    margin-bottom: 3vh;
+}
+
+#sidebar-profile-image-container {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 1.5vw;
+}
+
+#sidebar-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#student-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.button-link {
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: 3vh auto;
+    padding: 1vh;
+    border: 0.1vw solid #494C3A;
+    border-radius: 0.5vw;
+    color: #494C3A;
+    background: transparent;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-link:hover {
+    background-color: #A9BA9D;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 3vh;
+}
+
+#sidebar ul li {
+    padding: 0; /* Remove padding from li */
+    margin: 0.5vh 0;
+    font-size: 1rem;
+    border-radius: 0.5vw;
+    overflow: hidden;
+}
+
+#sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 2vh;
+    width: 100%; /* Make anchor fill the li element */
+    text-decoration: none;
+    color: inherit;
+    gap: 0.5vw;
+    transition: background-color 0.2s ease;
+}
+
+#sidebar ul li a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Active link styling */
+#sidebar ul li.active a {
+    background-color: #494C3A;
+    color: white;
+}
+
+.icon {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-right: 1vw;
+    vertical-align: middle;
+}
+
+
+#settings-section {
+    margin-left: 22vw;
+    padding: 5vh 3vw;
+    width: calc(100% - 22vw);
+}
+
+#settings-section h2 {
+    font-size: 2rem;
+    color: #494C3A;
+    margin-bottom: 2vh;
+}
+
+/* Settings card styling */
+.settings-card {
+    background-color: #D3D3D3;
+    padding: 3vh 2vw;
+    margin-bottom: 3vh;
+    border-radius: 0.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Toggle switch styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #000000;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Delete account button */
+#delete-account {
+    display: block;
+    width: 60%;
+    margin: 3vh auto;
+    padding: 1vh;
+    border: 0.1vw solid #d9534f;
+    border-radius: 0.5vw;
+    color: #d9534f;
+    background: transparent;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+#delete-account:hover {
+    background-color: #d9534f;
+    color: white;
+}
+
+/* Account Info Section */
+.account-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.account-info p {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+/* Change link */
+.change-link {
+    color: #494C3A;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-left: 5px;
+}
+
+.change-link:hover {
+    color: #A9BA9D;
+}
+
+/* Globe Icon */
+.globe-icon {
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 3px;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.dropdown-content p {
+    color: #333;
+    padding: 8px 12px;
+    text-align: left;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 2vh;
+}
+
+.dropdown-content p:hover {
+    background-color: #e0e0e0;
+}
+
+/* Email Change Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content input[type="email"] {
+    width: 90%; /* Adjust the width of the input box */
+    padding: 12px; /* Add padding for better usability */
+    margin: 10px auto; /* Center the input boxes and add space between them */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Font size for better readability */
+    display: block; /* Ensures the input boxes stack vertically */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#email-display {
+    font-weight: 500; /* Slightly bold for emphasis */
+    color: #333; /* Default text color */
+    font-size: 1vw; /* Matches the overall text size */
+    display: inline; /* Proper inline positioning with sibling elements */
+}
+
+#password place{
+    left: 90vw;
+}
+
+
+.modal-content button {
+    padding: 10px 20px;
+    background-color: #494C3A;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #A9BA9D;
+}
+
+/* Style for Password Input Fields */
+.modal-content input[type="password"] {
+    width: 90%; /* Adjust the width of the input box */
+    padding: 12px; /* Add padding for better usability */
+    margin: 10px auto; /* Center the input boxes and add space between them */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Font size for better readability */
+    display: block; /* Ensures the input boxes stack vertically */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Hover effect for Password Input Fields */
+.modal-content input[type="password"]:hover {
+    border-color: #494C3A; /* Olive border on hover */
+}
+
+/* Focus effect for Password Input Fields */
+.modal-content input[type="password"]:focus {
+    outline: none; /* Remove default outline */
+    border-color: #494C3A; /* Olive border when focused */
+    box-shadow: 0 0 5px rgba(73, 76, 58, 0.5); /* Glow effect */
+}
+
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #1A1A1A;
+    color: #EAEAEA;
+}
+
+.dark-theme #sidebar {
+    background-color: #333333;
+}
+
+.dark-theme #sidebar ul li a {
+    color: #EAEAEA;
+}
+
+.dark-theme #sidebar ul li a:hover {
+    background-color: #494C3A;
+}
+
+.dark-theme #sidebar ul li.active a {
+    background-color: #A9BA9D;
+    color: #1A1A1A;
+}
+.dark-theme #settings-section h2{
+    color: #FFFFFF;
+}
+
+.dark-theme .change-link{
+    color: #FFFFFF;
+}
+
+.dark-theme .settings-card {
+    background-color: #333333;
+    color: #EAEAEA;
+}
+
+.dark-theme .button-link,
+.dark-theme #delete-account {
+    border-color: #FF6666;
+    color: #FF6666;
+}
+
+.dark-theme .button-link:hover,
+.dark-theme #delete-account:hover {
+    background-color: #FF6666;
+    color: #1A1A1A;
+}
+
+.dark-theme .dropdown-content {
+    background-color: #444444;
+    color: #EAEAEA;
+}
+
+.dark-theme .dropdown-content p:hover {
+    background-color: #555555;
+}
+
+/* Dark Theme for Email Change Modal */
+.dark-theme .modal-content {
+    background-color: #333333; /* Dark background for modal */
+    color: #EAEAEA; /* Light text color */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+.dark-theme .modal-content input[type="email"] {
+    background-color: #444444; /* Dark input field background */
+    color: #EAEAEA; /* Light text in input field */
+    border: 1px solid #555555; /* Darker border */
+}
+
+.dark-theme .modal-content button {
+    background-color: #494C3A; /* Olive button background */
+    color: #EAEAEA; /* Light button text */
+}
+
+.dark-theme .modal-content button:hover {
+    background-color: #A9BA9D; /* Lighter olive hover */
+    color: #1A1A1A; /* Dark text on hover for contrast */
+}
+
+.dark-theme .close-btn {
+    color: #EAEAEA; /* Light close button color */
+}
+
+.dark-theme #email-display {
+    color: #EAEAEA; /* Light color for dark mode */
+}
+
+/* Dark Theme Styles for Password Input Fields */
+.dark-theme .modal-content input[type="password"] {
+    background-color: #444444; /* Dark background */
+    color: #EAEAEA; /* Light text color */
+    border: 1px solid #555555; /* Darker border */
+}
+
+.dark-theme .modal-content input[type="password"]:hover {
+    border-color: #A9BA9D; /* Lighter olive hover border */
+}
+
+.dark-theme .modal-content input[type="password"]:focus {
+    border-color: #A9BA9D; /* Lighter olive border on focus */
+    box-shadow: 0 0 5px rgba(169, 186, 157, 0.5); /* Glow effect */
+}
+

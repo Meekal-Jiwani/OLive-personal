@@ -1,0 +1,5 @@
+In the settings page, the email address of the user should be stored in the database (which is initially grabbed from when a user signs up). If a user intends to change their email, they may change it in the settings page and it should be updated to the database.
+
+For the password (which should also be grabbed from the signup page) just store it in the database. Not sure why there is a change button there if we already have a forgot password option.
+
+And then if a user wants to delete their account, then their info should be wiped from the database.
