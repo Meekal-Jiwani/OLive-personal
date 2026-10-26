@@ -6,6 +6,20 @@ This project contains the source code for this website.
 
 The canonical URL for this project is at https://gitlab.com/olive2985041/OLive
 
+## My Contributions (Meekal Jiwani)
+
+OLive was a team project (5 members, Agile). My work:
+
+- **Database:** designed the MySQL schema (13 tables) around a role-based `users` table for student and institution accounts, and restructured it to fix the sign-up flow mismatch described in the retrospective below.
+- **Features:** built the sign-in, profile, and settings pages in HTML/CSS, JavaScript, and PHP, secured with prepared statements, bcrypt password hashing, and sessions.
+- **Testing:** authored the 23-case sign-in test plan and automated front-end and back-end tests (Puppeteer and PHP) covering UI behaviour, XSS, SQL injection prevention, unique constraints, and CRUD integrity.
+- **Project setup:** set up the JIRA board, timeline, backlog, and sprint tasks, and created logo ideas for the team.
+
+Where to find it:
+- `My changes or Contributions to the OLive Project/` for my code (PHP, JS, HTML, CSS, database)
+- `Signin Page Test (Frontend & Backend)/` and `UI-testing/` for the test suites
+- `Logo Ideas/` for the logo concepts
+
 ## Linux* Operating Systems (64-bit)
 
 
